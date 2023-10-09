@@ -10,7 +10,7 @@ export default function App() {
   const [hasCameraPermission, setHasCameraPermission] = useState();
   const [hasMediaLibraryPermission, setHasMediaLibraryPermission] = useState();
   const [photo, setPhoto] = useState();
-  const [cameraType, setCameraType] = useState(Camera.Constants.Type.back); // Initialize with rear camera
+  const [cameraType, setCameraType] = useState(Camera.Constants.Type.back);
 
   useEffect(() => {
     (async () => {
@@ -75,7 +75,7 @@ export default function App() {
         <Button title="Take Pic" onPress={takePic} />
         <Button title="Toggle Camera" onPress={toggleCamera} />
       </View>
-
+      <StatusBar style="auto" />
     </Camera>
   );
 }
